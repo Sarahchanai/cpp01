@@ -5,42 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/21 11:23:04 by sachanai          #+#    #+#             */
-/*   Updated: 2025/11/25 18:43:08 by sarah            ###   ########.fr       */
+/*   Created: 2025/11/25 19:23:36 by sarah             #+#    #+#             */
+/*   Updated: 2025/11/25 20:49:20 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
- 
+
 #include <string>
 #include <iostream>
 
+// but de l'exo declarer et initialiser pleins de zombies d'un coup sur la heap
+// pas d'alloc separee pour chaque zombie
+// la fonction zombieHorde prend en para le nb de zombie et leur nom 
 
 
-
-class Zombie
+class   Zombie
 {
     public :
 
-		Zombie(std::string _name); //constructeur != de "Zombie()" -> name direct a la creation
-		~Zombie(); //destructeur
-		void announce(void); //fonct demandee ds le sujet -> affiche le nom du zombie
-    
+        Zombie(void); //constructeur par defaut
+        ~Zombie(void); //destructeur
+        void	announce(void); //fonction d'annonce
+		void	setName(std::string name); //setter pour le nom du zombie
+        
     private :
-	
-		std::string _name; // _name ds pv -> encapsulation
+
+		std::string _name; //nom du zombie
 };
 
-
-
-
-										//FONCTIONS HORS CLASSE
-
-Zombie	*newZombie(std::string name); //cf sujet
-void	randomChump(std::string name); //cf sujet
-
-
+Zombie	*zombieHorde(int N, std::string name); //cf sujet
 
 
 #endif

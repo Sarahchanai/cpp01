@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 18:38:19 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 18:48:50 by sarah            ###   ########.fr       */
+/*   Created: 2025/11/25 22:13:49 by sarah             #+#    #+#             */
+/*   Updated: 2025/11/25 22:13:50 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-//creer un zombie sur la stack -> variable locale
-//donner un nom a ce zombie
-//faire appeler la fonction announce de ce zombie
-//autodestruction a la fin de la fonction
-
-void	randomChump(std::string name)
-{
-    Zombie Zombie(name);
-	Zombie.announce();
-}

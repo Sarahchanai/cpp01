@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 18:38:19 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 18:48:50 by sarah            ###   ########.fr       */
+/*   Created: 2025/11/25 19:23:22 by sarah             #+#    #+#             */
+/*   Updated: 2025/11/25 21:32:06 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-//creer un zombie sur la stack -> variable locale
-//donner un nom a ce zombie
-//faire appeler la fonction announce de ce zombie
-//autodestruction a la fin de la fonction
-
-void	randomChump(std::string name)
+int	main(void)
 {
-    Zombie Zombie(name);
-	Zombie.announce();
+	Zombie	*horde = zombieHorde(5, "lewis");
+	
+	if (horde == NULL)
+	{
+		std::cout << "Failed to create zombie horde." << std::endl;
+		return (1);
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		horde[i].announce();
+	}
+
+	delete[] horde;
+
+
+	return (0);
 }
