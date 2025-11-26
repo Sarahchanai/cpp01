@@ -5,21 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 22:01:52 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:52:04 by sarah            ###   ########.fr       */
+/*   Created: 2025/11/26 11:53:53 by sarah             #+#    #+#             */
+/*   Updated: 2025/11/26 11:53:54 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
-
-int main()
-{
-	Weapon ferrari = Weapon ("ferrari");
-	HumanA Lewis("Lewis", ferrari);
-	
-	
-	
-	return (0);
-}
