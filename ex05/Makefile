@@ -1,10 +1,10 @@
-NAME = "Harl 2.0"
+NAME = Harl2.0
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Harl.cpp Harl.hpp
+SRCS = main.cpp Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

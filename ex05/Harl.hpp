@@ -6,7 +6,7 @@
 /*   By: sachanai <sachanai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:59:04 by sachanai          #+#    #+#             */
-/*   Updated: 2025/12/02 17:18:11 by sachanai         ###   ########.fr       */
+/*   Updated: 2025/12/13 14:50:56 by sachanai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include <iomanip>
 
-//but : comprendre pointeurs sur fonctions
+//but : comprendre pointeurs sur fonction membre 
 
 class	Harl
 {
@@ -26,14 +26,14 @@ class	Harl
 		~Harl(void);
 		
 		void	complain(std::string level);
-
-	private :
+		
+		private :
 		void	debug(void);
 		void	info(void);
 		void	warning(void);
 		void	error(void);
-};
-
+	};
+	
 
 
 //#pragma once
