@@ -6,13 +6,15 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 18:34:00 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 19:10:15 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/01 22:40:41 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 //creer un zombie avec new = malloc donc -> heap
+
+
 //donner un nom a ce zombie
 //retourner un pointeur sur ce zombie
 //le zombie survit apres l'appel de la fonction

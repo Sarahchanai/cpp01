@@ -6,11 +6,14 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 18:38:19 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 18:48:50 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/01 22:48:35 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+//temporaire objet crée ds la fonc° donc se détruit auto qd la fonc° se termine
+
 
 //creer un zombie sur la stack -> variable locale
 //donner un nom a ce zombie
@@ -19,6 +22,7 @@
 
 void	randomChump(std::string name)
 {
-    Zombie Zombie(name);
-	Zombie.announce();
+    Zombie zombie(name);
+	zombie.announce();
 }
+
