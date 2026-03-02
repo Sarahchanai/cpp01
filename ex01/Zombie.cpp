@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 19:23:49 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 21:29:22 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 00:45:54 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie(void)
 {
-    std::cout << _name << " A zombie has been created" << std::endl;
+    // std::cout << _name << " A zombie has been created" << std::endl;
 }
 
 Zombie::~Zombie(void)
@@ -30,4 +30,5 @@ void    Zombie::announce(void)
 void    Zombie::setName(std::string name)
 {
     this->_name = name;
+    std::cout << name << " has been created" << std::endl;
 }

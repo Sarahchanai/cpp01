@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 22:04:41 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:07:10 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 01:40:24 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 Weapon::Weapon(std::string type) : _type(type) //constructeur
 {
-    this->_type = "default type";
 }
 
 Weapon::~Weapon () //destructeur
 {
 }
+
+
 
 const std::string&	Weapon::getType(void) const //retourne une reference constante sur le type d'arme
 {

@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 22:05:13 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:15:02 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 01:28:38 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class	HumanA
 
 
 	private:
+	
 			std::string	_name; //nom du humain
 			Weapon	&_weapon; //reference a une arme
 	

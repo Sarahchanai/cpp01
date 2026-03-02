@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 22:13:49 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:29:53 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 01:38:24 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 HumanA::HumanA(std::string name, Weapon& weapon) : _name(name), _weapon(weapon) //constructeur avec reference a une arme
 {
 }
+
+/* HumanA::HumanA(std::string name)
+{
+	this->_name = name;
+	this->_weapon = NULL;
+} */
 
 HumanA::~HumanA() //destructeur
 {

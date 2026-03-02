@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 18:34:00 by sarah             #+#    #+#             */
-/*   Updated: 2026/03/01 22:40:41 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 00:09:15 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@
 
 
 Zombie	*newZombie(std::string name)
-// Zombie * -> retourne un pointeur sur un zombie
+// Zombie * -> décla° d'1 pointeur qui va stock l'adresse de l'objet type zombie 
 // newZombie -> nom de la fonction
 // (std::string name( -> parametre de la fonction -> nom du zombie a creer
 // je decide quand il s'annonce et quand il se detruit
+
+
+
+ // je crée un zombie sur la heap, et je stocke son adresse ds new_zombie pour pouvoir utiliser + tard
 
 
 {

@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 19:23:36 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 20:49:20 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 00:25:48 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ class   Zombie
 
         Zombie(void); //constructeur par defaut
         ~Zombie(void); //destructeur
+		
         void	announce(void); //fonction d'annonce
+		
 		void	setName(std::string name); //setter pour le nom du zombie
         
     private :

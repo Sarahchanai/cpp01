@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 22:08:49 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:16:06 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 01:29:07 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 class	HumanB
 {
 	public:
+	
 			HumanB(std::string name); //constructeur sans arme
 			~HumanB(); //destructeur
 			
@@ -27,6 +28,7 @@ class	HumanB
 			void	attack(void); //fonction d'attaque
 			
 	private:
+	
 			std::string	_name; //nom de l'humain
 			Weapon	*_weapon; //pointeur sur une arme
 

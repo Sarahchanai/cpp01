@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 14:49:07 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 18:33:21 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/01 23:50:42 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Zombie::Zombie(std::string name)
 {
 	this->_name = name;
 	std::cout << this->_name << " has been created" << std::endl;
+	//
 }
 
 Zombie::~Zombie(void)

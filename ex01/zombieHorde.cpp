@@ -6,18 +6,18 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 19:24:03 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/25 21:00:07 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 00:46:49 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie	*zombieHorde(int N, std::string name)
-
 //allouer N zombies sur la heap d'1 coup
-//initualiser chaque zombie avec le nom passe en para
+//initualiser chaque zombie w/ le nom passé en para
 //retourner un pointeur sur le 1er zombie
 
+
+Zombie	*zombieHorde(int N, std::string name)
 {
 	if (N <= 0)
 	{

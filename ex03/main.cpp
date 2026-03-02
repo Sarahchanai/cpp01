@@ -6,7 +6,7 @@
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 22:01:52 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 11:52:04 by sarah            ###   ########.fr       */
+/*   Updated: 2026/03/02 01:59:50 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,27 @@
 
 int main()
 {
+
+	//ref
 	Weapon ferrari = Weapon ("ferrari");
-	HumanA Lewis("Lewis", ferrari);
+	HumanA Lewis("Lewis", ferrari); // tjrs armé -> référence
+
+	Lewis.attack();
+
+	ferrari.setType("red");
+
+	Lewis.attack();
+
+	
+
+	
+	// pointeur
+	HumanB Piastri ("mclaren");
+	Piastri.attack();
+	Piastri.setWeapon(ferrari);
+	Piastri.attack();
+
+	
 	
 	
 	
