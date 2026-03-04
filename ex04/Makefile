@@ -1,4 +1,4 @@
-NAME = "Sed is for losers"
+NAME = Sed_is_for_losers
 
 CXX = c++
 
@@ -13,9 +13,10 @@ $(NAME) : $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	
 clean :
-	rm -f $(NAME)
+	rm -f $(OBJS)
 	
 fclean : clean
+	rm -f $(NAME)
 
 re : fclean all
 

@@ -5,83 +5,69 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarah <sarah@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 11:53:53 by sarah             #+#    #+#             */
-/*   Updated: 2025/11/26 23:41:47 by sarah            ###   ########.fr       */
+/*   Created: 2025/12/01 10:14:17 by sachanai          #+#    #+#             */
+/*   Updated: 2026/03/04 12:58:45 by sarah            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fstream>
 #include <iostream>
 #include <string>
+#include <fstream> //
 
-int replace(char **argv, const std::string& content)
+std::string	replace(std::string	fileText, const std::string	&wordToFind, const std::string	&wordToReplaceBy)
 {
-    std::string s1 = argv[2];
-    std::string s2 = argv[3];
-    
-    if (s1.empty())
-    {
-        std::cerr << "Error: s1 cannot be empty" << std::endl;
-        return 1;
-    }
-    
-    std::string outFilename = std::string(argv[1]) + ".replace";
-    std::ofstream outfile(outFilename.c_str());
-    
-    if (!outfile)
-    {
-        std::cerr << "Error: cannot create output file" << std::endl;
-        return 1;
-    }
-    
-    std::string result;
-    size_t pos = 0;
-    size_t lastPos = 0;
-    
-    // Construction progressive sans modifier la string originale
-    while ((pos = content.find(s1, lastPos)) != std::string::npos)
-    {
-        result.append(content, lastPos, pos - lastPos); // Copie jusqu'à s1
-        result.append(s2);                               // Ajoute s2
-        lastPos = pos + s1.length();                     // Avance après s1
-    }
-    result.append(content, lastPos, std::string::npos);  // Copie le reste
-    
-    outfile << result;
-    
-    if (outfile.fail())
-    {
-        std::cerr << "Error: failed to write to output file" << std::endl;
-        return 1;
-    }
-    
-    return 0;
+	size_t	pos = 0;
+	while ( (pos = fileText.find (wordToFind, pos)) != std::string:: npos)
+	{
+		fileText.erase (pos, wordToFind.size());
+		fileText.insert(pos, wordToReplaceBy);
+		pos += wordToReplaceBy.size();
+	}
+	return fileText;
 }
 
-int main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-    if (argc != 4)
+	if (ac != 4)
+	{
+		std::cerr << "Usage: <filename> <s1> <s2>" << std::endl;
+		return (1);
+	}
+	
+	std::string filename = av[1];
+    std::string wordToFind = av[2];
+    std::string wordToReplaceby = av[3];
+    
+    if ( wordToFind.empty() )
     {
-        std::cerr << "Usage: " << argv[0] << " <filename> <s1> <s2>" << std::endl;
-        return 1;
+        std::cerr << "Error: word to find an not be empty, define it" << std::endl;
+        return (1);
     }
     
-    std::ifstream infile(argv[1]);
-    if (!infile)
+	std::ifstream inFile(filename); //ouverture fichier de base
+
+	if (!inFile.is_open()) //Vérif
     {
-        std::cerr << "Error: cannot open file " << argv[1] << std::endl;
-        return 1;
-    }
-    
-    std::string content;
-    std::string line;
-    
-    while (std::getline(infile, line))
+		std::cerr << "Error: cannot open file '" << filename << "'." << std::endl;
+		return 1;
+	}
+
+	std::string content( (std::istreambuf_iterator<char>(inFile)) ,std::istreambuf_iterator<char>() ); //recopie par la lecture ifstream du premier char à plus rien 
+	
+	inFile.close(); //fermeture du fichier de base 
+
+	std::ofstream outFile(filename + ".replace"); // cré° new file pr écrire le résult -> ofstream
+	
+	if (!outFile.is_open())
     {
-        content += line;
-        if (!infile.eof())
-            content += '\n';
+		std::cerr << "Error: cannot create output file." << std::endl;
+		return 1;
     }
-    
-    return replace(argv, content);
+
+	outFile << replace(content, wordToFind, wordToReplaceby); // On écrit le contenu modifié sur le new fichier
+
+	outFile.close(); //je ferme le new fichier
+
+	return (0);
+	
 }
