@@ -1,4 +1,4 @@
-NAME = "Unnecessary violence"
+NAME = Unnecessary_violence
 
 CXX = c++
 

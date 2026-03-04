@@ -1,4 +1,4 @@
-NAME = "Moar_brainz!"
+NAME = Moar_brainz!
 
 CXX = c++
 
